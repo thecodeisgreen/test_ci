@@ -10,6 +10,10 @@ func F2() string {
 	return "F2"
 }
 
+func F3() string {
+	return "F3"
+}
+
 func main() {
 	fmt.Println("welcome")
 }
