@@ -16,6 +16,6 @@ func TestF2(t *testing.T) {
 
 func TestF3(t *testing.T) {
 	if F3() != "F3" {
-		t.Error("F3() must return  F3")
+		t.Error("F3() must return F3")
 	}
 }
