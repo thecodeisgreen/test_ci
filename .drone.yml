@@ -22,7 +22,10 @@ steps:
 - name: build-image
   image: plugins/docker
   settings:
+    username: hbettan
+    password: laviedeChateau16
     repo: thecodeisgreen/test_ci
+    tags: latest
 
 trigger:
   branch:
