@@ -30,7 +30,7 @@ steps:
     branch:
       - master
 
-- name: build-${DRONE-BRANCH}-image
+- name: build-${DRONE_BRANCH}-image
   image: plugins/docker
   settings:
     username:
