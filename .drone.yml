@@ -5,7 +5,10 @@ workspace:
   base: /go
   path: src/github.com/thecodeisgreen/test_ci
 
-steps:
+clone:
+  depth: 50
+
+  steps:
 - name: dep
   image: golang
   commands:
