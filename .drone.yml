@@ -23,8 +23,6 @@ steps:
   - ls -ail
   - go build
   - go test ./...
-  environment:
-    GOPATH: /go/src/github.com/thecodeisgreen/test_ci
 
 - name: build-image
   image: plugins/docker
