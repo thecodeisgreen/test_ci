@@ -8,7 +8,7 @@ workspace:
 clone:
   depth: 50
 
-  steps:
+steps:
 - name: dep
   image: golang
   commands:
