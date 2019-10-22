@@ -18,6 +18,7 @@ steps:
   commands:
     - go build
     - go test
+    - go test ./...
 
 - name: build-image
   image: plugins/docker
