@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"test_ci/models/counter"
 )
 
 func F1() string {
@@ -15,11 +14,6 @@ func F2() string {
 
 func F3() string {
 	return "F3"
-}
-
-func F4() int {
-	counter.Inc()
-	counter.Inc()
 }
 
 func main() {
