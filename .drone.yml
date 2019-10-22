@@ -4,7 +4,6 @@ name: default
 workspace:
   base: /go
   path: src/github.com/thecodeisgreen/test_ci
-
 clone:
   depth: 50
 
@@ -18,6 +17,7 @@ steps:
 - name: backend
   image: golang
   commands:
+  - env
   - pwd
   - ls -ail
   - go build
