@@ -3,7 +3,7 @@ name: default
 
 workspace:
   base: /go
-  path: src
+  path: src/test_ci
 clone:
   depth: 50
 
