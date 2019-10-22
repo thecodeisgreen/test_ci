@@ -1,9 +1,9 @@
 kind: pipeline
 name: default
 
-workspace:
-  base: /go
-  path: src/github.com/thecodeisgreen/test_ci
+#workspace:
+#  base: /go
+#  path: src/github.com/thecodeisgreen/test_ci
 
 clone:
   depth: 50
