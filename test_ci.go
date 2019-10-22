@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"test_ci/models/counter"
 )
 
 func F1() string {
@@ -17,5 +18,7 @@ func F3() string {
 }
 
 func main() {
-	fmt.Println("welcome")
+	c := counter.New(16)
+	c.Inc()
+	fmt.Println("welcome", c.Get())
 }
