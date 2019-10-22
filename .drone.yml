@@ -18,6 +18,7 @@ steps:
 - name: backend
   image: golang
   commands:
+  - ls -ail
   - go build
   - go test ./...
   environment:
