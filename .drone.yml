@@ -20,8 +20,8 @@ steps:
     - go test
 
 - name: build-image
-  image: plugin/docker
-  
+  image: plugins/docker
+
 
 trigger:
   branch:
