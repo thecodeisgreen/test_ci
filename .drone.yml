@@ -5,7 +5,7 @@ name: default
 workspace:
   base: /go
   path: src/github.com/thecodeisgreen/test_ci
-  
+
 steps:
 - name: dep
   image: golang
@@ -18,6 +18,10 @@ steps:
   commands:
     - go build
     - go test
+
+- name: build-image
+  image: plugin/docker
+  
 
 trigger:
   branch:
