@@ -23,8 +23,6 @@ steps:
   - ls -ail
   - go build
   - go test ./...
-  environment:
-    GOPATH: /go
 
 - name: build-image
   image: plugins/docker
