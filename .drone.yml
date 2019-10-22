@@ -21,7 +21,8 @@ steps:
 
 - name: build-image
   image: plugins/docker
-
+  setting:
+    repo: thecodeisgreen/test_ci
 
 trigger:
   branch:
