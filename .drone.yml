@@ -3,7 +3,7 @@ name: default
 
 workspace:
   base: /go
-  path: src/github.com/thecodeisgreen/test_ci
+  path: src
 clone:
   depth: 50
 
