@@ -3,12 +3,17 @@ type: docker
 name: default
 
 steps:
-- name: build
-  pull: always
+- name: dep
   image: golang
   commands:
-  - go build
-  - go test
+    - go get github.com/golang/dep/...
+    - dep ensure
+
+- name: backend
+  image: golang
+  commands:
+    - go build
+    - go test
 
 trigger:
   branch:
