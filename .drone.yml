@@ -18,7 +18,7 @@ steps:
   - go build
   - go test ./...
 
-- name: build-image
+- name: build-latest-image
   image: plugins/docker
   settings:
     username:
@@ -30,7 +30,7 @@ steps:
     branch:
       - master
 
-- name: build-image
+- name: build-*-image
   image: plugins/docker
   settings:
     username:
