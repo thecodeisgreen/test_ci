@@ -20,8 +20,8 @@ steps:
   commands:
     - go build
     - go test ./...
-  env:
-    GOPATH: /go/src/github.com/thecodeisgreen/test_ci
+    environment:
+      GOPATH: /go/src/github.com/thecodeisgreen/test_ci
 
 - name: build-image
   image: plugins/docker
