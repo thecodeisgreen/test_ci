@@ -1,5 +1,6 @@
 FROM golang:1.13-alpine
 
+ARG BUILD_VERSION="latest"
 #RUN apk add --update git
 
 WORKDIR /go/src/test_ci
