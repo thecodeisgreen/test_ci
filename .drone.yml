@@ -26,27 +26,9 @@ steps:
     password: 
       from_secret: DOCKER_PASSWORD
     repo: thecodeisgreen/test_ci
-  when:
-    branch:
-      - master
-
-- name: build-${DRONE_BRANCH}-image
-  image: plugins/docker
-  settings:
-    username:
-      from_secret: DOCKER_USERNAME
-    password: 
-      from_secret: DOCKER_PASSWORD
-    repo: thecodeisgreen/test_ci
-    tags: ${DRONE_BRANCH}
-  when:
-    branch:
-      exclude :
-        - master
+    auto_tag: true
 
 trigger:
-  branch:
-    - master
-    - preprod
   event:
     - push
+    - tag
