@@ -1,6 +1,8 @@
 package version
 
-import "time"
+import (
+	"time"
+)
 
 type Version struct {
 	Value string
@@ -15,11 +17,11 @@ func Get() Version {
 		value = "latest"
 	}
 
-	if date == "__DATE__" {
-		date = time.Now().String()
+	t, err := time.Parse(time.UnixDate, date)
+	if err != nil {
+		date = time.Now().Format(time.UnixDate)
 	} else {
-		t, _ := time.Parse(time.ANSIC, date)
-		date = t.String()
+		date = t.Local().Format(time.UnixDate)
 	}
 
 	return Version{
