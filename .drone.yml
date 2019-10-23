@@ -27,6 +27,8 @@ steps:
       from_secret: DOCKER_PASSWORD
     repo: thecodeisgreen/test_ci
     auto_tag: true
+    build_args:
+      BUILD_VERSION: ${DRONE_TAG}
 
 trigger:
   event:
