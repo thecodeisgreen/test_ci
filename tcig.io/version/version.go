@@ -13,10 +13,6 @@ func Get() Version {
 	value := "__VERSION__"
 	date := "__DATE__"
 
-	if value == "" || value == "__VERSION__" {
-		value = "latest"
-	}
-
 	t, err := time.Parse(time.UnixDate, date)
 	if err != nil {
 		date = time.Now().Format(time.UnixDate)
