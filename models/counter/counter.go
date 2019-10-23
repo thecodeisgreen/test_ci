@@ -1,7 +1,5 @@
 package counter
 
-var _value = 0
-
 type Counter struct {
 	value int
 }
