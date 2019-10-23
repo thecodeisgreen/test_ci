@@ -28,7 +28,7 @@ steps:
     repo: thecodeisgreen/test_ci
     auto_tag: true
     build_args:
-      BUILD_VERSION: ${DRONE_TAG}
+      - BUILD_VERSION: ${DRONE_TAG}
 
 trigger:
   event:
