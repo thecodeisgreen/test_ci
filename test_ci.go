@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"test_ci/models/counter"
+
+	"test_ci/tcig.io/version"
 )
 
 func F1() string {
@@ -21,6 +23,6 @@ func main() {
 	c := counter.New(15)
 	c.Inc()
 	c.Inc()
-	fmt.Println("__VERSION__")
+	fmt.Println(version.Get().String())
 	fmt.Println("welcome", c.Get())
 }
