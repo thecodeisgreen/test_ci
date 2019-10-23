@@ -18,7 +18,8 @@ func F3() string {
 }
 
 func main() {
-	c := counter.New(16)
+	c := counter.New(15)
+	c.Inc()
 	c.Inc()
 	fmt.Println("welcome", c.Get())
 }
