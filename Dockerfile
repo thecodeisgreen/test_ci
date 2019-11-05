@@ -16,6 +16,6 @@ COPY tcig.io ./tcig.io
 #RUN dep ensure --vendor-only
 
 RUN sed -i -- "s/__VERSION__/${BUILD_VERSION}/" tcig.io/version/version.go 
-RUN sed -i -- "s/__DATE__/$(date)/" tcig.io/version/version.go
+RUN sed -i -- "s/__DATE__/$(date)/" tcig.io/version/version.go 
 
 CMD ["go", "run", "test_ci.go"]

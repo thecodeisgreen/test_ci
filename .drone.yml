@@ -1,6 +1,33 @@
 kind: pipeline
 name: default
 
+services:
+- name: ccns
+  pull: if-not-exists
+  image: thecodeisgreen/fasstag2r_ccns:1.9.0
+  ports:
+    - 3000
+  settings:
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+  environment:
+    NODE_ENV: development
+    MONGO_DB_URL: mongodb://mongo:27017/ccns
+    DOCS_CACHING_KEY: off
+    API_KEYS: default:default:all
+    JWT: on
+    JWT_SECRET: 67FT_IFCT_23XS_PL9!_ZERC_DFRE
+    SERVICE_CCNS_API_KEY: default:default
+    SERVICE_CONVERTER_URL: off
+    SERVICE_CCNS_URL: http://ccns:3000
+    LOGGER_LOG_DIR: /service/logs/ccns
+    ROOT_DIR: /service/
+
+image_pull_secrets:
+- dockerconfig
+
 workspace:
   base: /go
   path: src/test_ci
