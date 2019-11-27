@@ -1,17 +1,18 @@
 kind: pipeline
 name: default
-
+type: docker
 services:
+- name: mongo
+  image: mongo:4.0
+  command: [--smallfiles]
+  ports:
+    - 27017
 - name: ccns
   pull: if-not-exists
   image: thecodeisgreen/fasstag2r_ccns:1.9.0
+  
   ports:
     - 3000
-  settings:
-    username:
-      from_secret: DOCKER_USERNAME
-    password:
-      from_secret: DOCKER_PASSWORD
   environment:
     NODE_ENV: development
     MONGO_DB_URL: mongodb://mongo:27017/ccns
@@ -36,6 +37,8 @@ steps:
 - name: dep
   image: golang
   commands:
+  - ls /
+  - ls /go
   - go get github.com/golang/dep/...
   - dep ensure
 
@@ -59,5 +62,4 @@ steps:
 
 trigger:
   event:
-    - push
     - tag
