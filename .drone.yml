@@ -61,5 +61,8 @@ steps:
       - BUILD_VERSION=${DRONE_TAG}
 
 trigger:
+  branch:
+    - master
   event:
+    - push
     - tag
